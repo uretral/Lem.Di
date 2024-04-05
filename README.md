@@ -24,4 +24,7 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Используется локальная база - JSON Server
-(https://github.com/typicode/json-server/tree/v0)
+https://github.com/typicode/json-server/tree/v0
+
+### После установки используйте команду в папке проекта
+json-server --watch data/data.json 
