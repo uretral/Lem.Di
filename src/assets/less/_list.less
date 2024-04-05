@@ -1,0 +1,111 @@
+@import "smart-grid";
+@import "vars";
+
+.list {
+  .col();
+  .size(8);
+  border: 1px solid @color-borders;
+  padding: @space-large;
+
+
+  &-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  &-header {
+    text-align: center;
+
+    fieldset {
+      .row-flex;
+      margin-top: @space-regular;
+    }
+
+    label {
+      .col();
+      .size(9);
+    }
+
+    button {
+      .col();
+      .size(3);
+      background: url("../icons/plus.svg") no-repeat center @color-warn;
+      background-size: contain;
+    }
+
+  }
+
+  &-body {
+    fieldset {
+      .row-flex;
+      margin-top: @space-small;
+    }
+
+    label {
+      .col();
+      .size(9);
+      position: relative;
+      height: @inputs-height;
+
+      &.active, &:hover {
+        span {
+          display: inline-flex;
+        }
+
+      }
+
+      input[type="text"] {
+        &.done {
+          background: rgba(2, 255, 2, 0.2);
+        }
+        &.cancel {
+          text-decoration: line-through;
+          background: rgba(75, 74, 74, 0.56);
+        }
+      }
+
+      span {
+        display: none;
+        position: absolute;
+        top: -@space-small;
+        right: 0;
+        bottom: 0;
+        height: @inputs-height;
+        z-index: 1;
+        align-items: center;
+      }
+
+      button {
+        width: @space-large;
+        height: @space-large;
+        margin-right: @space-small;
+        &.save {
+          background: url("../icons/save.svg") no-repeat center @color-warn;
+          background-size: @space-regular;
+        }
+
+        &.edit {
+          background: url("../icons/edit.svg") no-repeat center @color-accent-lighter;
+          background-size: @space-regular;
+        }
+
+        &.delete {
+          background: url("../icons/delete.svg") no-repeat center @color-error;
+          background-size: @space-regular;
+        }
+
+        &.cancel {
+          background: url("../icons/cancel.svg") no-repeat center @color-error;
+          background-size: @space-regular;
+        }
+      }
+    }
+  }
+
+  &-footer {
+  }
+
+}
+
+

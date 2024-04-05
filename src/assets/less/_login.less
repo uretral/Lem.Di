@@ -1,0 +1,76 @@
+@import "smart-grid";
+@import "vars";
+
+
+.login {
+  &-row {
+    align-items: center;
+    flex-direction: column;
+  }
+  &-header {
+    .col();
+    .size(5);
+    .size-sm(12);
+    margin-top: 50px;
+    color: @color-warn;
+    background: @color-accent-lighter;
+    padding: 16px;
+    text-align: center;
+    border-radius: 3px 3px 0 0;
+
+    .xs-block({
+      margin-top: 20px;
+    });
+
+
+    p {
+      color: @color-bg;
+      margin-top: @space-small;
+    }
+  }
+
+  &-form {
+
+    .col();
+    .size(5);
+    .size-sm(12);
+    padding: @space-large @space-large * 1.5;
+    border: 1px solid @color-accent;
+    label {
+      display: block;
+      margin: 0 auto 36px;
+    }
+
+    button {
+      float: right;
+    }
+  }
+
+
+  &-footer {
+    .col();
+    .size(5);
+    .size-sm(12);
+    background: @color-accent-lighter;
+    padding: 16px;
+    text-align: center;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 50px;
+    .xs-block({
+      margin-bottom: 20px;
+    });
+    p {
+      color: @color-bg;
+      margin-top: @space-small;
+      a {
+        color: @color-warn;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+
+}

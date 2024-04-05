@@ -1,0 +1,116 @@
+@import "smart-grid";
+
+/*fonts*/
+@font-face {
+  font-family: 'Roboto Mono';
+  src: local('Roboto Mono'),
+  local('RobotoMono-Regular'),
+  url('~@/assets/font/robotomono/Robotomono.woff2') format('woff2'),
+  url('~@/assets/font/robotomono/Robotomono.woff') format('woff'),
+  url('~@/assets/font/robotomono/Robotomono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono Medium';
+  src: local('Roboto Mono Medium'),
+  local('RobotoMono-Medium'),
+  url('~@/assets/font/robotomono/Robotomonomedium.woff2') format('woff2'),
+  url('~@/assets/font/robotomono/Robotomonomedium.woff') format('woff'),
+  url('~@/assets/font/robotomono/Robotomonomedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono Bold';
+  src: local('Roboto Mono Bold'),
+  local('RobotoMono-Bold'),
+  url('~@/assets/font/robotomono/Robotomonobold.woff2') format('woff2'),
+  url('~@/assets/font/robotomono/Robotomonobold.woff') format('woff'),
+  url('~@/assets/font/robotomono/Robotomonobold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono Thin';
+  src: local('Roboto Mono Thin'),
+  local('RobotoMono-Thin'),
+  url('~@/assets/font/robotomono/Robotomonothin.woff2') format('woff2'),
+  url('~@/assets/font/robotomono/Robotomonothin.woff') format('woff'),
+  url('~@/assets/font/robotomono/Robotomonothin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+.regular {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.medium {
+  font-family: 'Roboto Mono Medium', monospace;
+}
+
+.bold {
+  font-family: 'Roboto Mono Bold', monospace;
+}
+
+.thin {
+  font-family: 'Roboto Mono Thin', monospace;
+}
+
+
+/*colors*/
+@color-regular: #4d4d4d;
+@color-bg: #fff;
+@color-borders: #bebebe;
+@color-accent: #05668D;
+@color-accent-lighter: #0678a6;
+@color-warn: #ffa500;
+@color-error: red;
+
+
+/*spaces*/
+@space-regular: 16px;
+@space-large: 32px;
+@space-small: 8px;
+@space-tiny: 4px;
+@inputs-height: 48px;
+
+/*tags*/
+h1 {
+  .medium;
+  font-size: 24px;
+}
+
+/*form elems*/
+button {
+  height: @inputs-height;
+  padding: @space-small @space-regular;
+  background: @color-accent;
+  color: @color-bg;
+  font-size: 16px;
+  border: unset;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label {
+
+  span {
+    display: block;
+    padding: @space-small 0;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    height: @inputs-height;
+    padding: @space-small;
+    border: 1px solid @color-borders;
+    border-radius: 3px;
+
+  }
+}
+

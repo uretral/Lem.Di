@@ -1,0 +1,103 @@
+@import "smart-grid";
+@import "vars";
+
+body {
+  .regular;
+  font-size: 16px;
+}
+
+
+section, header, footer, .container {
+  box-sizing: border-box;
+  width: 100%;
+
+  > div {
+    .wrapper();
+
+    > div {
+      .row-flex();
+    }
+  }
+}
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: @color-accent;
+
+  .header {
+    .col();
+    .size(12);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-logo {
+      .bold;
+      font-size: 24px;
+      color: @color-bg;
+      text-decoration: none;
+    }
+
+    &-user {
+      height: 100%;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: @space-large;
+        width: auto;
+      }
+
+      span {
+        color: @color-bg;
+        font-size: 14px;
+      }
+
+      a {
+        font-size: 12px;
+        color: @color-warn;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &_settings {
+        display: flex;
+        flex-direction: column;
+        padding-left: @space-small;
+      }
+    }
+
+
+
+
+  }
+
+}
+
+footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: @color-accent;
+  margin-top: auto;
+
+  .footer {
+    .col();
+    .size(12);
+    text-align: center;
+    font-size: 14px;
+    color: @color-bg;
+  }
+}
+
+

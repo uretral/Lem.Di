@@ -1,0 +1,54 @@
+@import "smart-grid";
+@import "vars";
+
+.notice {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px;
+  flex-direction: column;
+  padding: @space-small;
+  border: 1px solid @color-borders;
+  color: @color-bg;
+  background: @color-accent;
+  border-radius: 3px;
+
+  &-title {
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid @color-bg;
+
+  }
+
+  &-content {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: @space-regular;
+    height: @space-regular;
+    background: url("../icons/close.svg") no-repeat center;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  &.success {
+
+  }
+
+  &.warn {
+    background: @color-warn;
+    color: @color-bg;
+  }
+
+  &.error {
+    background: @color-error;
+  }
+
+}

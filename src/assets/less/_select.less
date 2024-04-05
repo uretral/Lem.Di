@@ -1,0 +1,69 @@
+@import "smart-grid";
+@import "vars";
+
+.select {
+  .col();
+  .size(3);
+  border: 1px solid @color-borders;
+  border-radius: 3px;
+  position: relative;
+  height: @inputs-height;
+
+  &.active {
+    .select-options {
+      display: block;
+    }
+    .select-title {
+      &:after {
+        transform: unset;
+      }
+    }
+
+  }
+
+  &-title {
+    display: flex;
+    height: 100%;
+    padding-left: @space-regular;
+    align-items: center;
+    &:after {
+      content: '';
+      display: block;
+      width: @space-large;
+      height:  @inputs-height;
+      background: url("../icons/triangle.svg") no-repeat center;
+      background-size: @space-regular auto;
+      margin-left: auto;
+      transform: rotate(180deg);
+
+    }
+
+  }
+
+  &-options {
+    position: absolute;
+    top: @inputs-height - 1;
+    left: -1px;
+    right: -1px;
+    background: @color-borders;
+    display: none;
+    padding-top: @space-tiny;
+    padding-bottom: @space-tiny;
+    z-index: 1;
+    border: 1px solid @color-borders;
+  }
+
+  &-option {
+    width: 100%;
+    height: @space-large;
+    display: flex;
+    align-items: center;
+    padding: @space-small;
+    user-select: none;
+
+    &:hover {
+      background: @color-accent-lighter;
+      color: @color-bg;
+    }
+  }
+}
